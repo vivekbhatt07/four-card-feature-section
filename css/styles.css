@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --primary-font: "Poppins", sans-serif;
+  --extra-light-weight: 200;
+  --regular-weight: 400;
+  --semi-bold-weight: 600;
+  --card-one-strip: hsl(0, 78%, 62%);
+  --card-two-strip: hsl(180, 62%, 55%);
+  --card-three-strip: hsl(34, 97%, 64%);
+  --card-four-strip: hsl(212, 86%, 64%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-weight: var(--regular-weight);
+  font-size: 15px;
+}
