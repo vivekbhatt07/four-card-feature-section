@@ -5,8 +5,8 @@
   --extra-light-weight: 200;
   --regular-weight: 400;
   --semi-bold-weight: 600;
-  --card-one-strip: hsl(0, 78%, 62%);
-  --card-two-strip: hsl(180, 62%, 55%);
+  --card-one-strip: hsl(180, 62%, 55%);
+  --card-two-strip: hsl(0, 78%, 62%);
   --card-three-strip: hsl(34, 97%, 64%);
   --card-four-strip: hsl(212, 86%, 64%);
 }
@@ -23,4 +23,127 @@ body {
   font-family: var(--primary-font);
   font-weight: var(--regular-weight);
   font-size: 15px;
+  min-height: 100vh;
+  display: flex;
+}
+
+h1 {
+  font-weight: var(--extra-light-weight);
+}
+
+h1, h2, h3 {
+  color: hsl(234, 12%, 34%);
+}
+
+.wrapper {
+  max-width: 100%;
+  width: 85%;
+  margin: 64px auto;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.section-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.section-description {
+  color: hsl(229, 6%, 66%);
+}
+
+.section-head, .section-description {
+  text-align: center;
+}
+
+.cards-container {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+
+.card-one {
+  background-color: var(--card-one-strip);
+}
+
+.card-two {
+  background-color: var(--card-two-strip);
+}
+
+.card-three {
+  background-color: var(--card-three-strip);
+}
+
+.card-four {
+  background-color: var(--card-four-strip);
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.card-wrap {
+  background-color: #fff;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px;
+  height: 100%;
+}
+
+.card-description {
+  margin-bottom: 18px;
+  color: hsl(229, 6%, 66%);
+}
+
+.card-img-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media(min-width: 1280px) {
+  .wrapper {
+    max-width: 100%;
+    width: 80%;
+    margin: auto;
+  }
+
+  .section-description {
+    max-width: 520px;
+  }
+
+  .cards-container {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: ". two ."
+                         "one two four"
+                         "one three four"
+                         ". three .";
+  }
+
+  .card-one {
+    grid-area: one;
+  }
+
+  .card-two {
+    grid-area: two;
+  }
+
+  .card-three {
+    grid-area: three;
+  }
+
+  .card-four {
+    grid-area: four;
+  }
 }
