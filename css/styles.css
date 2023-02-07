@@ -25,14 +25,20 @@ body {
   font-size: 15px;
   min-height: 100vh;
   display: flex;
+  background-color: hsl(0, 0%, 98%);
 }
 
 h1 {
   font-weight: var(--extra-light-weight);
+  font-size: 24px;
 }
 
 h1, h2, h3 {
   color: hsl(234, 12%, 34%);
+}
+
+p {
+  letter-spacing: 0.5px;
 }
 
 .wrapper {
@@ -104,6 +110,7 @@ h1, h2, h3 {
 .card-description {
   margin-bottom: 18px;
   color: hsl(229, 6%, 66%);
+  font-size: 13px;
 }
 
 .card-img-wrap {
@@ -112,10 +119,15 @@ h1, h2, h3 {
 }
 
 @media(min-width: 1280px) {
+
+  h1 {
+    font-size: 30px;
+  }
+
   .wrapper {
     max-width: 100%;
     width: 80%;
-    margin: auto;
+    margin: 40px auto;
   }
 
   .section-description {
@@ -123,6 +135,7 @@ h1, h2, h3 {
   }
 
   .cards-container {
+    gap: 32px;
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: ". two ."
